@@ -1,4 +1,4 @@
-const { emailValidation, passwordValidation } = require('../utils')
+const { emailValidation, passwordValidation } = require('../utils/validate')
 /**
  * Email Validation - string
  * Password Validation
@@ -17,7 +17,7 @@ const registerInitialCheck = (req, res, next) =>{
     ){
         next();
     }else{
-        res.status(401).send("initial Checks Fail");
+        res.status(401).send(console.log("initial Checks Fail"));
     }
 };
 module.exports = registerInitialCheck;
